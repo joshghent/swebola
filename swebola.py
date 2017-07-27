@@ -7,7 +7,6 @@ rcParams['font.family'] = 'serif'
 rcParams['font.size'] = 16
 rcParams['figure.figsize'] = 12, 8
 from PIL import Image
-from images2gif import writeGif
 import imageio
 
 beta = 0.010
@@ -81,8 +80,6 @@ theCM._lut[:-3,-1] = alphas
 
 for n in range(N-1):
     u[n+1] = euler_step(u[n], f, dt)
-
-from images2gif import writeGif
 
 keyFrames = []
 frames = 60.0
