@@ -95,8 +95,8 @@ for i in range(0, N-1, int(N/frames)):
   
 images = [Image.open(fn) for fn in keyFrames]
 
-frames = []
+''' frames = []
 for image in images:
-    frames.append(imageio.imread(image))
-imageio.mimsave('outbreak.gif', frames, format='GIF', duration=0.3)
+    frames.append(imageio.imread(image, format='PNG')) '''
+imageio.mimsave('outbreak.gif', images, format='GIF', duration=0.3)
 plt.clf()
